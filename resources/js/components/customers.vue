@@ -21,7 +21,6 @@
                            <td> {{ user.role }}</td>
                            <td> {{ user.company }}</td>
                        </tr>
-
                    </tbody>
                 </table>
             </div>
