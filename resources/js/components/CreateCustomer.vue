@@ -3,7 +3,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Insert New Customers</div>
+                    <div class="card-header">
+                        Insert New Customers
+                                <a href="/" class="btn btn-dark text-right">Back</a>
+                        </div>
 
                     <div class="card-body">
                        <form method="POST">

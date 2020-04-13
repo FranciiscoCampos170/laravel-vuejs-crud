@@ -1943,12 +1943,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       name: '',
       email: '',
-      job: '',
+      role: '',
       company: '',
       url: '/api/customers'
     };
@@ -1960,7 +1963,7 @@ __webpack_require__.r(__webpack_exports__);
         method: 'post',
         name: this.name,
         email: this.email,
-        job: this.job,
+        role: this.role,
         company: this.company,
         headers: {
           'Content-Type': 'application/json'
@@ -1968,7 +1971,7 @@ __webpack_require__.r(__webpack_exports__);
         body: JSON.stringify({
           name: this.name,
           email: this.email,
-          job: this.job,
+          role: this.role,
           company: this.company
         })
       }).then(function (response) {
@@ -1993,7 +1996,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -37706,16 +37708,12 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-8" }, [
         _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("Criar Novos Clientes")
-          ]),
+          _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("form", { attrs: { method: "POST" } }, [
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "name" } }, [
-                  _vm._v("Nome Completo")
-                ]),
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Full Name")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -37774,33 +37772,33 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "job" } }, [_vm._v("Cargo")]),
+                _c("label", { attrs: { for: "role" } }, [_vm._v("Role")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.job,
-                      expression: "job"
+                      value: _vm.role,
+                      expression: "role"
                     }
                   ],
                   staticClass: "form-control",
-                  attrs: { type: "text", id: "job", name: "job" },
-                  domProps: { value: _vm.job },
+                  attrs: { type: "text", id: "role", name: "role" },
+                  domProps: { value: _vm.role },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.job = $event.target.value
+                      _vm.role = $event.target.value
                     }
                   }
                 })
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "form-group" }, [
-                _c("label", { attrs: { for: "company" } }, [_vm._v("Empresa")]),
+                _c("label", { attrs: { for: "company" } }, [_vm._v("Company")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -37845,7 +37843,23 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header" }, [
+      _vm._v(
+        "\n                    Insert New Customers\n                            "
+      ),
+      _c(
+        "a",
+        { staticClass: "btn btn-dark text-right", attrs: { href: "/" } },
+        [_vm._v("Back")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
