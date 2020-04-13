@@ -1,8 +1,10 @@
 
 ## Overview
+
     CRUD using Laravel Framework, VueJs and Bootstrap CSS.
 
 ## Setup
+
     - RUN: npm install
     - RUN: npm run dev
     - Make a .env file and set your db
