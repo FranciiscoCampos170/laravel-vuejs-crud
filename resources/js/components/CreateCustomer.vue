@@ -18,7 +18,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="role">Cargo</label>
-                                <input type="text" class="form-control" id="rple" name="role" v-model="role">
+                                <input type="text" class="form-control" id="role" name="role" v-model="role">
                             </div>
                             <div class="form-group">
                                 <label for="company">Empresa</label>
