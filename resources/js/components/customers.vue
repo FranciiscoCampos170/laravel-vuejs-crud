@@ -1,17 +1,18 @@
 <template>
-    <div class="container">
+
         <div class="row justify-content-center">
-            <div class="col-md-8 text-right ">
+            <div class="col-md-12 text-right ">
                 <a href="/create" class="btn btn-primary mt-20">Create</a>
             </div>
-            <div class="col-md-8">
-                <table class="table table-hover table-bordered">
+            <div class="col-md-12">
+                <table class="table table-hover table-bordered table-responsive">
                    <thead>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
                     <th> Cargo</th>
                     <th>Empresa</th>
+                    <th colspan="2">Actions</th>
                    </thead>
                    <tbody>
                        <tr v-for="user in users" :key="user.id">
@@ -20,12 +21,24 @@
                            <td> {{ user.email }}</td>
                            <td> {{ user.role }}</td>
                            <td> {{ user.company }}</td>
+                           <td>
+                               <a href="#" class="btn btn-warning btn-sm">
+                                   <i class="fas fa-edit"></i>
+                               </a>
+                           </td>
+                           <td>
+                               <a href="#">
+                                   <a href="#" class="btn btn-danger btn-sm">
+                                   <i class="fas fa-trash"></i>
+                               </a>
+                               </a>
+                           </td>
                        </tr>
                    </tbody>
                 </table>
             </div>
         </div>
-    </div>
+
 </template>
 
 <script>
