@@ -1,5 +1,5 @@
 
-## Install VueJS
+## Setup
     - npm install
     - npm run dev
 
