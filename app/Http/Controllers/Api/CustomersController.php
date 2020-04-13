@@ -38,7 +38,14 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        $validateData = $request->validate([
+                'name' => 'required|max:5',
+                'email' => 'required',
+                'job' => 'required',
+                'company' => 'required'
+            ]);
+
+            return $validateData;
     }
 
     /**
