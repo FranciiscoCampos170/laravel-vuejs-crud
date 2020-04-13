@@ -17,8 +17,8 @@
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" v-model="email">
                             </div>
                             <div class="form-group">
-                                <label for="job">Cargo</label>
-                                <input type="text" class="form-control" id="job" name="job" v-model="job">
+                                <label for="role">Cargo</label>
+                                <input type="text" class="form-control" id="rple" name="role" v-model="role">
                             </div>
                             <div class="form-group">
                                 <label for="company">Empresa</label>
@@ -39,7 +39,7 @@
            return {
                name: '',
                email: '',
-               job: '',
+               role: '',
                company: '',
                url: '/api/customers'
            }
@@ -52,7 +52,7 @@
                    method: 'post',
                    name: this.name,
                    email: this.email,
-                   job: this.job,
+                   role: this.role,
                    company: this.company,
                 headers: {
                     'Content-Type': 'application/json'
@@ -60,7 +60,7 @@
                 body:JSON.stringify({
                     name: this.name,
                     email: this.email,
-                    job: this.job,
+                    role: this.role,
                     company: this.company
                 })
                }).then((response) => response.json())
