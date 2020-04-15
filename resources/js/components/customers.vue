@@ -22,7 +22,7 @@
                            <td> {{ user.role }}</td>
                            <td> {{ user.company }}</td>
                            <td>
-                               <a href="#" class="btn btn-warning btn-sm">
+                               <a :href="'api/customers/'+user.id+'/edit'" class="btn btn-warning btn-sm">
                                    <i class="fas fa-edit"></i>
                                </a>
                            </td>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <edit-customers></edit-customers>
+    <edit-customers :id="'{!! json_encode($id) !!}'"></edit-customers>
 @endsection

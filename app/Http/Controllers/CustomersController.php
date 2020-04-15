@@ -55,9 +55,9 @@ class CustomersController extends Controller
      * @param  \App\Customers  $customers
      * @return \Illuminate\Http\Response
      */
-    public function edit(Customers $customers)
+    public function edit(Customers $customer)
     {
-        //
+        return "OLA MUNDO!";
     }
 
     /**

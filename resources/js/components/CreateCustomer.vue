@@ -7,10 +7,8 @@
                         Insert New Customers
                                 <a href="/" class="btn btn-dark text-right">Back</a>
                         </div>
-
                     <div class="card-body">
                        <form method="POST">
-
                            <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" class="form-control" id="name" name="name" v-model="name">

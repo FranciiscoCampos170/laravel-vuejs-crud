@@ -15,9 +15,9 @@ class CustomersController extends Controller
      */
     public function index()
     {
-       $customer = Customer::all();
+        $customer = Customer::all();
 
-       return response()->json($customer);
+        return response()->json($customer);
     }
 
     /**
@@ -38,17 +38,14 @@ class CustomersController extends Controller
      */
     public function store(Request $request)
     {
+        $customer = new Customer;
+        $customer->name = $request->get('name');
+        $customer->email = $request->get('email');
+        $customer->role = $request->get('job');
+        $customer->company = $request->get('company');
 
-            $customer = new Customer;
-            $customer->name = $request->get('name');
-            $customer->email = $request->get('email');
-            $customer->role = $request->get('job');
-            $customer->company = $request->get('company');
-
-            $customer->save();
-            return response()->json($customer);
-
-
+        $customer->save();
+        return response()->json($customer);
     }
 
     /**
@@ -70,7 +67,8 @@ class CustomersController extends Controller
      */
     public function edit(Customer $customer)
     {
-        //
+        $id =  $customer->id;
+        return view('edit', compact('id'));
     }
 
     /**

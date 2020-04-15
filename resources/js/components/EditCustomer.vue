@@ -9,6 +9,7 @@
                         </div>
                     <div class="card-body">
                        <form method="POST">
+
                            <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" class="form-control" id="name" name="name" v-model="name">
@@ -43,7 +44,7 @@
                email: '',
                role: '',
                company: '',
-               url: '/api/customers/'+this.id
+               url: '/api/customers/'+ this.id,
            }
        },
        mounted() {
