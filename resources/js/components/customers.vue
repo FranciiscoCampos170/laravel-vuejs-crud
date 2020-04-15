@@ -2,7 +2,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-12 text-right ">
-                <a href="/create" class="btn btn-primary mt-20">Create</a>
+                <a href="/customers/create" class="btn btn-primary mt-20">Create</a>
             </div>
             <div class="col-md-12">
                 <table class="table table-hover table-bordered table-responsive">
@@ -22,7 +22,7 @@
                            <td> {{ user.role }}</td>
                            <td> {{ user.company }}</td>
                            <td>
-                               <a :href="'api/customers/'+user.id+'/edit'" class="btn btn-warning btn-sm">
+                               <a :href="'/customers/'+user.id+'/edit'" class="btn btn-warning btn-sm">
                                    <i class="fas fa-edit"></i>
                                </a>
                            </td>

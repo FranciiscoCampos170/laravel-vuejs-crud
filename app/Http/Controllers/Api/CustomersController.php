@@ -41,7 +41,7 @@ class CustomersController extends Controller
         $customer = new Customer;
         $customer->name = $request->get('name');
         $customer->email = $request->get('email');
-        $customer->role = $request->get('job');
+        $customer->role = $request->get('role');
         $customer->company = $request->get('company');
 
         $customer->save();

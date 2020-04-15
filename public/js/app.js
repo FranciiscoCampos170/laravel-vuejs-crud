@@ -37973,7 +37973,10 @@ var staticRenderFns = [
       ),
       _c(
         "a",
-        { staticClass: "btn btn-dark text-right", attrs: { href: "/" } },
+        {
+          staticClass: "btn btn-dark text-right",
+          attrs: { href: "/customers" }
+        },
         [_vm._v("Back")]
       )
     ])
@@ -38206,7 +38209,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "btn btn-warning btn-sm",
-                      attrs: { href: "api/customers/" + user.id + "/edit" }
+                      attrs: { href: "/customers/" + user.id + "/edit" }
                     },
                     [_c("i", { staticClass: "fas fa-edit" })]
                   )
@@ -38230,7 +38233,10 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-md-12 text-right " }, [
       _c(
         "a",
-        { staticClass: "btn btn-primary mt-20", attrs: { href: "/create" } },
+        {
+          staticClass: "btn btn-primary mt-20",
+          attrs: { href: "/customers/create" }
+        },
         [_vm._v("Create")]
       )
     ])

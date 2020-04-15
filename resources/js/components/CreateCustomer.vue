@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">
                         Insert New Customers
-                                <a href="/" class="btn btn-dark text-right">Back</a>
+                                <a href="/customers" class="btn btn-dark text-right">Back</a>
                         </div>
                     <div class="card-body">
                        <form method="POST">
