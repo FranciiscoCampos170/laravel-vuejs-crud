@@ -56,7 +56,8 @@ class CustomersController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        $customer = Customer::find($customer->id);
+        return response()->json($customer);
     }
 
     /**
@@ -67,8 +68,7 @@ class CustomersController extends Controller
      */
     public function edit(Customer $customer)
     {
-        $id =  $customer->id;
-        return view('edit', compact('id'));
+        return "OLA MUNDO!";
     }
 
     /**
@@ -80,7 +80,7 @@ class CustomersController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
-        //
+        return "OLA MUNDO!";
     }
 
     /**

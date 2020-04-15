@@ -2043,6 +2043,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
+    var _this = this;
+
     console.log(this.id);
     fetch(this.url, {
       method: 'get',
@@ -2057,6 +2059,7 @@ __webpack_require__.r(__webpack_exports__);
       return response.json();
     }).then(function (res) {
       var customer = res;
+      _this.name = customer.name, _this.email = customer.email, _this.role = customer.role, _this.company = customer.company;
       console.log(res);
     })["catch"](function (error) {
       console.error(error);
@@ -38153,7 +38156,10 @@ var staticRenderFns = [
       ),
       _c(
         "a",
-        { staticClass: "btn btn-dark text-right", attrs: { href: "/" } },
+        {
+          staticClass: "btn btn-dark text-right",
+          attrs: { href: "/customers" }
+        },
         [_vm._v("Back")]
       )
     ])

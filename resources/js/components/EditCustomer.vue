@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-header">
                         Edit Customers
-                                <a href="/" class="btn btn-dark text-right">Back</a>
+                                <a href="/customers" class="btn btn-dark text-right">Back</a>
                         </div>
                     <div class="card-body">
                        <form method="POST">
@@ -44,7 +44,7 @@
                email: '',
                role: '',
                company: '',
-               url: '/api/customers/'+ this.id,
+               url: '/api/customers/'+this.id,
            }
        },
        mounted() {
@@ -62,6 +62,10 @@
                }).then((response) => response.json())
                     .then((res) => {
                         var customer = res;
+                        this.name = customer.name,
+                        this.email = customer.email,
+                        this.role = customer.role,
+                        this.company = customer.company
                     console.log(res);
 
                     }).catch((error) => {

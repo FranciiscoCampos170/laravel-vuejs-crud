@@ -57,7 +57,8 @@ class CustomersController extends Controller
      */
     public function edit(Customers $customer)
     {
-        return "OLA MUNDO!";
+        $id = $customer->id;
+        return view('edit', compact('id'));
     }
 
     /**
