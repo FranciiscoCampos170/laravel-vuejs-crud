@@ -8,7 +8,7 @@
                                 <a href="/customers" class="btn btn-dark text-right">Back</a>
                         </div>
                     <div class="card-body">
-                       <form method="POST">
+                       <form method="PATCH">
 
                            <div class="form-group">
                                 <label for="name">Full Name</label>
@@ -26,7 +26,7 @@
                                 <label for="company">Company</label>
                                 <input type="text" class="form-control" id="company" name="company" v-model="company">
                             </div>
-                            <button type="button" class="btn btn-primary" v-on:click="addCustomer()">Salvar</button>
+                            <button type="button" class="btn btn-primary" v-on:click="editCustomer()">Salvar</button>
                         </form>
                     </div>
                 </div>
@@ -73,11 +73,11 @@
                 });
        },
        methods: {
-           addCustomer() {
+           editCustomer() {
                console.log(this.name);
 
                fetch(this.url, {
-                   method: 'post',
+                   method: 'PATCH',
                    name: this.name,
                    email: this.email,
                    role: this.role,

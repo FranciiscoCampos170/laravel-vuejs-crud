@@ -80,7 +80,15 @@ class CustomersController extends Controller
      */
     public function update(Request $request, Customer $customer)
     {
-        return "OLA MUNDO!";
+        $customer = Customer::findOrFail($customer->id);
+        $customer->name = $request->get('name');
+        $customer->email = $request->get('email');
+        $customer->role = $request->get('role');
+        $customer->company = $request->get('company');
+
+        $customer->save();
+
+        return "UPDATED!";
     }
 
     /**

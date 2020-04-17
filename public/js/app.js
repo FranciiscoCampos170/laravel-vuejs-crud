@@ -2066,10 +2066,10 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
-    addCustomer: function addCustomer() {
+    editCustomer: function editCustomer() {
       console.log(this.name);
       fetch(this.url, {
-        method: 'post',
+        method: 'PATCH',
         name: this.name,
         email: this.email,
         role: this.role,
@@ -38013,7 +38013,7 @@ var render = function() {
           _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
-            _c("form", { attrs: { method: "POST" } }, [
+            _c("form", { attrs: { method: "PATCH" } }, [
               _c("div", { staticClass: "form-group" }, [
                 _c("label", { attrs: { for: "name" } }, [_vm._v("Full Name")]),
                 _vm._v(" "),
@@ -38132,7 +38132,7 @@ var render = function() {
                   attrs: { type: "button" },
                   on: {
                     click: function($event) {
-                      return _vm.addCustomer()
+                      return _vm.editCustomer()
                     }
                   }
                 },
