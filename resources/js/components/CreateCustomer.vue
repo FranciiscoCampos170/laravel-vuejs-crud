@@ -22,7 +22,7 @@
                                 <input type="text" class="form-control" id="role" name="role" v-model="role">
                             </div>
                             <div class="form-group">
-                                <label for="company">Company</label>
+                                  <label for="company">Company</label>
                                 <input type="text" class="form-control" id="company" name="company" v-model="company">
                             </div>
                             <button type="button" class="btn btn-primary" v-on:click="addCustomer()">Salvar</button>

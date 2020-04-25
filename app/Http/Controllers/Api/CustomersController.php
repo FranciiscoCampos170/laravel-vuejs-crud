@@ -88,7 +88,7 @@ class CustomersController extends Controller
 
         $customer->save();
 
-        return "UPDATED!";
+        //return view('customers');
     }
 
     /**
