@@ -47,7 +47,6 @@
        },
        methods: {
            addCustomer() {
-               console.log(this.name);
 
                fetch(this.url, {
                    method: 'post',
