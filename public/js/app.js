@@ -1956,7 +1956,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     addCustomer: function addCustomer() {
-      console.log(this.name);
       fetch(this.url, {
         method: 'post',
         name: this.name,
@@ -2146,8 +2145,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2173,6 +2170,24 @@ __webpack_require__.r(__webpack_exports__);
         return response.json();
       }).then(function (res) {
         _this.users = res;
+      })["catch"](function (error) {
+        console.error(error);
+      });
+    },
+    deleteCustomer: function deleteCustomer(id, index) {
+      var _this2 = this;
+
+      console.log("Hello Word!");
+      var $this = this;
+      fetch(this.url + id, {
+        method: 'delete',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function (response) {
+        return response.json();
+      }).then(function (res) {
+        _this2.users = res;
       })["catch"](function (error) {
         console.error(error);
       });
@@ -38221,7 +38236,21 @@ var render = function() {
                   )
                 ]),
                 _vm._v(" "),
-                _vm._m(2, true)
+                _c("td", [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-danger btn-sm",
+                      attrs: { href: "javascript:;" },
+                      on: {
+                        click: function($event) {
+                          return _vm.deleteCustomer(user.id, _vm.users)
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-trash" })]
+                  )
+                ])
               ])
             }),
             0
@@ -38263,20 +38292,6 @@ var staticRenderFns = [
       _c("th", [_vm._v("Empresa")]),
       _vm._v(" "),
       _c("th", { attrs: { colspan: "2" } }, [_vm._v("Actions")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("a", { attrs: { href: "#" } }, [
-        _c(
-          "a",
-          { staticClass: "btn btn-danger btn-sm", attrs: { href: "#" } },
-          [_c("i", { staticClass: "fas fa-trash" })]
-        )
-      ])
     ])
   }
 ]

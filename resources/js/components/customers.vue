@@ -27,10 +27,8 @@
                                </a>
                            </td>
                            <td>
-
-                                   <a href="javascript:;" class="btn btn-danger btn-sm" v-on:click="deleteCustomer(user.id)">
+                                   <a href="javascript:;" class="btn btn-danger btn-sm" v-on:click="deleteCustomer(user.id, users)">
                                    <i class="fas fa-trash"></i>
-
                                </a>
                            </td>
                        </tr>
@@ -68,11 +66,11 @@
                         console.error(error)
                 });
             },
-            deleteCustomer(id){
+            deleteCustomer(id, index){
                 console.log("Hello Word!");
 
                 let $this = this
-                fetch(this.url, {
+                fetch(this.url + id, {
                     method: 'delete',
                     headers: {
                         'Content-Type': 'application/json'
