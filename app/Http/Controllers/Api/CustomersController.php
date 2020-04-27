@@ -99,6 +99,9 @@ class CustomersController extends Controller
      */
     public function destroy(Customer $customer)
     {
-        //
+        $user = Customer::find($customer->id);
+        $user->delete();
+
+        return response()->json($user);
     }
 }
