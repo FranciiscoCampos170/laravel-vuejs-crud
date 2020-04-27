@@ -27,10 +27,10 @@
                                </a>
                            </td>
                            <td>
-                               <a href="#">
-                                   <a href="#" class="btn btn-danger btn-sm">
+
+                                   <a href="javascript:;" class="btn btn-danger btn-sm" v-on:click="deleteCustomer(user.id)">
                                    <i class="fas fa-trash"></i>
-                               </a>
+
                                </a>
                            </td>
                        </tr>
@@ -58,6 +58,22 @@
                 let $this = this
                 fetch(this.url, {
                     method: 'get',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                }).then((response) => response.json())
+                    .then((res) => {
+                    this.users = res;
+                    }).catch((error) => {
+                        console.error(error)
+                });
+            },
+            deleteCustomer(id){
+                console.log("Hello Word!");
+
+                let $this = this
+                fetch(this.url, {
+                    method: 'delete',
                     headers: {
                         'Content-Type': 'application/json'
                     },
