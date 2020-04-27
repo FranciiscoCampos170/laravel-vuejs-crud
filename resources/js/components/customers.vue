@@ -70,7 +70,7 @@
                 console.log("Hello Word!");
 
                 let $this = this
-                fetch(this.url + id, {
+                fetch(this.url + '/'+ id, {
                     method: 'delete',
                     headers: {
                         'Content-Type': 'application/json'

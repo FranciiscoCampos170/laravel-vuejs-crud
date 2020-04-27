@@ -2179,7 +2179,7 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log("Hello Word!");
       var $this = this;
-      fetch(this.url + id, {
+      fetch(this.url + '/' + id, {
         method: 'delete',
         headers: {
           'Content-Type': 'application/json'
